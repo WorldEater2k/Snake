@@ -35,6 +35,12 @@ namespace Snake
             else
                 y += n;
         }
+
+        public void Clear()
+        {
+            this.sym = ' ';
+            this.Draw();
+        }
         public int GetX()
         {
             return x;

@@ -19,9 +19,9 @@ namespace Snake
 
         public Point (Point p)
         {
-            this.x = p.x;
-            this.y = p.y;
-            this.sym = p.sym;
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
         }
 
         public void Move(int n, Direction direction)
@@ -35,11 +35,14 @@ namespace Snake
             else
                 y += n;
         }
-
+        public bool HasHit(Point p)
+        {
+            return x == p.x && y == p.y;
+        }
         public void Clear()
         {
-            this.sym = ' ';
-            this.Draw();
+            sym = ' ';
+            Draw();
         }
         public int GetX()
         {
